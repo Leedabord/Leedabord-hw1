@@ -1,10 +1,9 @@
-<!-- 
-JSON { Match, Team, Player, jp, s[0:18], h[0:18], w[0:18] }
-JSON { Cat, subCat, date, desc, amt }
--->
-
 <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 <style>
+  
+  #cat-photo-form {
+  background-color: green;
+}
   .red-text {
     color: red;
   }
@@ -28,6 +27,10 @@ JSON { Cat, subCat, date, desc, amt }
   .smaller-image {
     width: 100px;
   }
+
+  .gray-background {
+    background-color: gray;
+  }
 </style>
 
 <h2 class="red-text">CatPhotoApp</h2>
@@ -36,22 +39,25 @@ JSON { Cat, subCat, date, desc, amt }
 
 <a href="#"><img class="smaller-image thick-green-border" alt="A cute orange cat lying on its back" src="https://bit.ly/fcc-relaxing-cat"></a>
 
-<p>Things cats love:</p>
-<ul>
-  <li>cat nip</li>
-  <li>laser pointers</li>
-  <li>lasagna</li>
-</ul>
-<p>Top 3 things cats hate:</p>
-<ol>
-  <li>flea treatment</li>
-  <li>thunder</li>
-  <li>other cats</li>
-</ol>
-<form action="/submit-cat-photo">
-  <label><input type="radio" name="indoor-outdoor"> Indoor</label>
+<div class="gray-background">
+  <p>Things cats love:</p>
+  <ul>
+    <li>cat nip</li>
+    <li>laser pointers</li>
+    <li>lasagna</li>
+  </ul>
+  <p>Top 3 things cats hate:</p>
+  <ol>
+    <li>flea treatment</li>
+    <li>thunder</li>
+    <li>other cats</li>
+  </ol>
+</div>
+
+<form action="/submit-cat-photo" id="cat-photo-form">
+  <label><input type="radio" name="indoor-outdoor" checked> Indoor</label>
   <label><input type="radio" name="indoor-outdoor"> Outdoor</label>
-  <label><input type="checkbox" name="personality"> Loving</label>
+  <label><input type="checkbox" name="personality" checked> Loving</label>
   <label><input type="checkbox" name="personality"> Lazy</label>
   <label><input type="checkbox" name="personality"> Energetic</label>
   <input type="text" placeholder="cat photo URL" required>
