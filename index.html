@@ -12,25 +12,25 @@
             
 <!-- //gwfl 1.1.b 2-way binding ngModel  binds scope directly to html elements  -->
 	<div>
-		Favorite word: <input type="text" />
-		- [Display selection here]
+		Favorite word: <input type="text" ng-model="favoriteWord" />
+		- {{favoriteWord}}
 	</div>
 	<div>
 		Favorite color:
-		<input type="radio" name="fc" value="Red">Red</input>
-		<input type="radio" name="fc" value="Green">Green</input>
-		<input type="radio" name="fc" value="Yellow">Yellow</input>
-		<input type="radio" name="fc" value="Blue">Blue</input>
-		- [Display selection here]
+		<input type="radio" name="fc" value="Red" ng-model="favoriteColor">Red</input>
+		<input type="radio" name="fc" value="Green" ng-model="favoriteColor">Green</input>
+		<input type="radio" name="fc" value="Yellow" ng-model="favoriteColor">Yellow</input>
+		<input type="radio" name="fc" value="Blue" ng-model="favoriteColor">Blue</input>
+		- {{favoriteColor}}
 	</div>
 	<div>
 		Favorite shape:
-		<select>
+		<select ng-model="favoriteShape">
 			<option value="Circle">Circle</option>
 			<option value="Triangle">Triangle</option>
 			<option value="Square">Square</option>
 		</select>
-		- [Display selection here]
+		- {{favoriteShape}}
 	</div>
 
 </div>  <!-- //gwfl end ng-controller "index"  -->
