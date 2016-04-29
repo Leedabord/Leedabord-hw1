@@ -1,16 +1,39 @@
 <!DOCTYPE html>
 
-<!-- //gwfl 1.b  add ng-app="root" to html -->
+<!-- //gwfl 0.1.b  add ng-app="root" to html -->
 <html ng-app="root">
     <body>
 
-<!-- //gwfl 2.b  add ng-controller "index"" -->
+<!-- //gwfl 0.2.b  add ng-controller "index"" -->
         <div ng-controller="index">
         
-<!-- //gwfl 3.b  display message from $scope -->
+<!-- //gwfl 0.3.b  display message from $scope -->
         {{message}}
             
-        </div>
+<!-- //gwfl 1.1.b add some html elements -->
+	<div>
+		Favorite word: <input type="text" />
+		- [Display selection here]
+	</div>
+	<div>
+		Favorite color:
+		<input type="radio" name="fc" value="Red">Red</input>
+		<input type="radio" name="fc" value="Green">Green</input>
+		<input type="radio" name="fc" value="Yellow">Yellow</input>
+		<input type="radio" name="fc" value="Blue">Blue</input>
+		- [Display selection here]
+	</div>
+	<div>
+		Favorite shape:
+		<select>
+			<option value="Circle">Circle</option>
+			<option value="Triangle">Triangle</option>
+			<option value="Square">Square</option>
+		</select>
+		- [Display selection here]
+	</div>
+
+</div>  <!-- //gwfl end ng-controller "index"  -->
 
     </body>
 </html>
