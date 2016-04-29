@@ -21,5 +21,13 @@ angular.module('root', [])
   <span ng-class="{bold: isBold(), italic: isItalic(), underline: isUnderlined()}">
         {{message}}
   </span> */
-         
+  
+//gwfl 1.2.a  ng-repeat 
+		$scope.products = [
+			{id: 1, name: "Hockey puck"},
+			{id: 2, name: "Golf club"},
+			{id: 3, name: "Baseball bat"},
+			{id: 4, name: "Lacrosse stick"}
+		];
+
     }]);
