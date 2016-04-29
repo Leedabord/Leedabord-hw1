@@ -17,5 +17,9 @@ angular.module('root', [])
 		$scope.isBold = function () { return $scope.value % 2 === 0; };
 		$scope.isItalic = function () { return $scope.value % 3 === 0; };
 		$scope.isUnderlined = function () { return $scope.value % 5 === 0; };
-        
+/*  <input type="text" ng-model="value" />
+  <span ng-class="{bold: isBold(), italic: isItalic(), underline: isUnderlined()}">
+        {{message}}
+  </span> */
+         
     }]);
