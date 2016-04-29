@@ -37,6 +37,23 @@
 		- {{favoriteShape}}
 	</div>
 
+<!-- //gwfl 1.2.b  ng-repeat -->
+  <table>
+	  <thead>
+		  <tr>
+			  <td>Id</td>
+			  <td>Name</td>
+		  </tr>
+	  </thead>
+	  <tbody>
+		  <tr ng-repeat="vprod in products"
+			  ng-class="{oddRow: $odd}">
+			  <td>{{vprod.id}}</td>
+			  <td>{{vprod.name}}</td>
+		  </tr>
+	  </tbody>
+  </table>
+
 </div>  <!-- //gwfl end ng-controller "index"  -->
 
     </body>
