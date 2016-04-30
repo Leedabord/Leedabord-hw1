@@ -30,4 +30,13 @@ angular.module('root', [])
 			{id: 4, name: "Lacrosse stick"}
 		];
 
+//gwfl 1.2.a  ngShow, ngHide, ngIf
+		$scope.isFirstElementVisible = true;
+		$scope.isSecondElementVisible = true;
+/*  	<div><input type="checkbox" ng-model="isFirstElementVisible" /> Is first element visible</div>
+	<div><input type="checkbox" ng-model="isSecondElementVisible" /> Is second element visible</div>
+	<div ng-show="isFirstElementVisible">First Element</div>
+	<div ng-if="isSecondElementVisible">Second Element</div>    */
+	
     }]);
+
