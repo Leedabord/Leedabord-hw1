@@ -1,0 +1,59 @@
+<!-- //gwfl 0.1.b  add ng-app="root" to html -->
+<html ng-app="root">
+    <body>
+
+<!-- //gwfl 0.2.b  add ng-controller "index"" -->
+        <div ng-controller="index">
+        
+<!-- //gwfl 0.3.b  display message from $scope -->
+<!-- //gwfl 1.2.b  set class(es) based on "true/false" return -->
+  <input type="text" ng-model="value" />
+  <span ng-class="{bold: isBold(), italic: isItalic(), underline: isUnderlined()}">
+        {{message}}
+  </span>
+            
+<!-- //gwfl 1.1.b 2-way binding ngModel  binds scope directly to html elements  -->
+	<div>
+		Favorite word: <input type="text" ng-model="favoriteWord" />
+		- {{favoriteWord}}
+	</div>
+	<div>
+		Favorite color:
+		<input type="radio" name="fc" value="Red" ng-model="favoriteColor">Red</input>
+		<input type="radio" name="fc" value="Green" ng-model="favoriteColor">Green</input>
+		<input type="radio" name="fc" value="Yellow" ng-model="favoriteColor">Yellow</input>
+		<input type="radio" name="fc" value="Blue" ng-model="favoriteColor">Blue</input>
+		- {{favoriteColor}}
+	</div>
+	<div>
+		Favorite shape:
+		<select ng-model="favoriteShape">
+			<option value="Circle">Circle</option>
+			<option value="Triangle">Triangle</option>
+			<option value="Square">Square</option>
+		</select>
+		- {{favoriteShape}}
+	</div>
+
+<!-- //gwfl 1.2.b  ng-repeat -->
+  <table>
+	  <thead>
+		  <tr>
+			  <td>Id</td>
+			  <td>Name</td>
+		  </tr>
+	  </thead>
+	  <tbody>
+		  <tr ng-repeat="vprod in products"
+			  ng-class="{oddRow: $odd}">
+			  <td>{{vprod.id}}</td>
+			  <td>{{vprod.name}}</td>
+		  </tr>
+	  </tbody>
+  </table>
+  
+<!-- //gwfl 1.2.b  ng-show, ng-hide, ng-if -->
+  <div><input type="checkbox" ng-model="isFirstElementVisible" /> Is first element visible</div>
+  <div><input type="checkbox" ng-model="isSecondElementVisible" /> Is second element visible</div>
+  <div ng-show="isFirstElementVisible">First Element</div>
+  <div ng-if="isSecondElementVisible">Second Element</div>
